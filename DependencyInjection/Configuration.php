@@ -19,8 +19,8 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('liip_url_auto_converter');
+        $treeBuilder = new TreeBuilder('liip_url_auto_converter');
+        $rootNode = $treeBuilder->getRootNode();
 
         $rootNode
             ->children()
