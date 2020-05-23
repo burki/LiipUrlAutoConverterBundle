@@ -14,8 +14,8 @@ class UrlAutoConverterTwigExtensionTest extends \PHPUnit_Framework_TestCase
         $this->assertIsArray($returnArray);
         $this->assertNotEmpty($returnArray);
         $filter = reset($returnArray);
-        $this->assertInstanceOf('Twig_SimpleFilter', $filter);
-        $this->assertEquals(array('html'), $filter->getSafe(new \Twig_Node()));
+        $this->assertInstanceOf('Twig\\TwigFilter', $filter);
+        $this->assertEquals(array('html'), $filter->getSafe(new \Twig\Node\Node()));
     }
 
     public function provider()

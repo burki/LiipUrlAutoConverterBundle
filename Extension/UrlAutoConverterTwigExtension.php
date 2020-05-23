@@ -2,7 +2,7 @@
 
 namespace Liip\UrlAutoConverterBundle\Extension;
 
-class UrlAutoConverterTwigExtension extends \Twig_Extension
+class UrlAutoConverterTwigExtension extends \Twig\Extension\AbstractExtension
 {
     protected $linkClass;
     protected $target;
@@ -41,7 +41,7 @@ class UrlAutoConverterTwigExtension extends \Twig_Extension
     public function getFilters()
     {
         return array(
-            new \Twig_SimpleFilter(
+            new \Twig\TwigFilter(
                 'converturls',
                 array($this, 'autoConvertUrls'),
                 array(
